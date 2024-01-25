@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: allience;
+  src: url(../fonts/Allenoire\ Font.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "allience", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 400vh;
+  background: #fff;
+  position: relative;
+}
+.container .hero {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+.container .hero::before {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 94;
+}
+.container .hero::after {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 94;
+}
+.container .hero header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  padding: 0 3vw 0 2vw;
+  position: relative;
+  z-index: 99;
+}
+.container .hero header .right {
+  display: flex;
+  gap: 1vw;
+  flex: 33%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .hero header h1 {
+  font-family: "allience";
+  flex: 33%;
+  font-size: 25px;
+  font-weight: 300;
+}
+.container .hero header ul {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex: 33%;
+  gap: 2vw;
+}
+.container .hero header ul li {
+  list-style: none;
+}
+.container .hero header ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.container .hero header ul li i {
+  margin-left: 5px;
+}
+.container .hero video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+.container .hero .mid {
+  z-index: 97;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 120px);
+}
+.container .hero .mid img {
+  transform: translateY(-30px);
+}
+.container .hero .mid .top {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.container .hero .mid .top span {
+  width: 120px;
+  background: #fff;
+  height: 5px;
+}
+.container .hero .mid h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 10vh;
+  overflow: hidden;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.container .hero .mid h1 span {
+  transform: translateY(0vh);
+  font-family: "allience";
+  font-size: 10vh;
+  height: 10vh;
+}
+.container .hero .mainFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  padding: 0 3vw 0 2vw;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+.container .hero .mainFooter .left {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+.container .hero .mainFooter .center {
+  transform: translateY(30px);
+}
+.container .hero .mainFooter .center img {
+  scale: 0.7;
+  animation: spin infinite 2s linear;
+}
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 180deg;
+  }
+}
+.container .hero .mainFooter .right ul {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  position: relative;
+}
+.container .hero .mainFooter .right ul::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+  bottom: -3px;
+  left: 0;
+  transform: translateX(105px);
+}
+.container .hero .mainFooter .right ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.container .page1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  background: linear-gradient(rgb(130, 182, 40), rgb(134, 191, 42), white);
+}
+.container .page1 .left {
+  transform: scaleX(-1);
+  opacity: 0.5;
+  position: absolute;
+  top: -26px;
+  left: -25px;
+}
+.container .page1 .right {
+  position: absolute;
+  top: -26px;
+  opacity: 0.5;
+  right: -25px;
+}
+.container .page1 .mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70vh;
+  color: #fff;
+}
+.container .page1 .mid h1 {
+  font-size: 10vh;
+  font-family: "allience";
+}
+.container .page1 .mid p {
+  text-align: center;
+}
+.container .page2 {
+  width: 100%;
+  height: 100vh;
+  padding: 2vw;
+}
+.container .page2 .heading {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+.container .page2 .heading .right {
+  display: flex;
+  gap: 1vw;
+}
+.container .page2 .heading .right .leftBtn {
+  width: 30px;
+  border: 1px solid #bbb;
+  color: #bbb;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.container .page2 .heading .right .rightBtn {
+  width: 30px;
+  border: 1px solid #000;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.container .page2 .heading h1 {
+  font-family: "allience";
+  font-weight: 500;
+}
+.container .page2 .heading img {
+  width: 80px;
+  filter: invert(100%);
+  position: absolute;
+  top: -40px;
+  rotate: 35deg;
+  left: 160px;
+}
+.container .page2 .cards {
+  height: 85vh;
+}
+.container .page2 .cards .nav {
+  display: flex;
+  height: 10%;
+  align-items: center;
+  margin-left: 10px;
+  gap: 2vw;
+}
+.container .page2 .cards .nav li {
+  list-style: none;
+}
+.container .page2 .cards .nav li.active {
+  color: rgb(255, 72, 0);
+  border-bottom: 2px solid rgb(255, 72, 0);
+}
+.container .page2 .cards .wrapper {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .page2 .cards .wrapper .card {
+  width: 24%;
+  background: #ddd;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.container .page2 .cards .wrapper .card .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  transform: translateY(-9px);
+}
+.container .page2 .cards .wrapper .card .top img {
+  width: 52%;
+  opacity: 0.6;
+}
+.container .page2 .cards .wrapper .card .top img:first-child {
+  transform: scaleX(-1);
+}
+.container .page2 .cards .wrapper .card img {
+  width: 100%;
+  transition: scale 0.3s linear;
+  height: 100%;
+}
+.container .page2 .cards .wrapper .card:hover img {
+  scale: 1.1;
+}
+.container .page3 {
+  width: 100%;
+  height: 100vh;
+  padding: 2vw;
+  position: relative;
+  overflow-x: hidden;
+}
+.container .page3 .heading {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.container .page3 .heading .right {
+  display: flex;
+  gap: 1vw;
+}
+.container .page3 .heading .right .leftBtn {
+  width: 30px;
+  border: 1px solid #bbb;
+  color: #bbb;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.container .page3 .heading .right .leftBtn.active {
+  color: #000;
+  border: 1px solid #000;
+}
+.container .page3 .heading .right .rightBtn {
+  width: 30px;
+  border: 1px solid #bbb;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #bbb;
+}
+.container .page3 .heading .right .rightBtn.active {
+  color: #000;
+  border: 1px solid #000;
+}
+.container .page3 .heading h1 {
+  font-family: "allience";
+  font-weight: 500;
+}
+.container .page3 .heading img {
+  width: 80px;
+  filter: invert(100%);
+  position: absolute;
+  top: -35px;
+  rotate: 35deg;
+  left: 290px;
+}
+.container .page3 .cards {
+  height: 85vh;
+}
+.container .page3 .cards .nav {
+  display: flex;
+  height: 10%;
+  align-items: center;
+  margin-left: 10px;
+  gap: 2vw;
+}
+.container .page3 .cards .nav li {
+  list-style: none;
+}
+.container .page3 .cards .nav li.active {
+  color: rgb(255, 72, 0);
+  border-bottom: 2px solid rgb(255, 72, 0);
+}
+.container .page3 .cards .wrapper {
+  height: 90%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  width: 120vw;
+}
+.container .page3 .cards .wrapper .card {
+  width: 19vw;
+  background: #ddd;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s linear;
+}
+.container .page3 .cards .wrapper .card:hover {
+  width: 40vw;
+}
+.container .page3 .cards .wrapper .card img {
+  width: 100%;
+  transition: scale 0.3s linear;
+  height: 100%;
+  aspect-ratio: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.container .page4 {
+  width: 100%;
+  height: 100vh;
+  padding: 2vw;
+}
+.container .page4 .heading {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .page4 .heading .right {
+  display: flex;
+  gap: 1vw;
+}
+.container .page4 .heading .right .leftBtn {
+  width: 30px;
+  border: 1px solid #bbb;
+  color: #bbb;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.container .page4 .heading .right .rightBtn {
+  width: 30px;
+  border: 1px solid #000;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.container .page4 .heading h1 {
+  font-family: "allience";
+  font-weight: 500;
+}
+.container .page4 .heading img {
+  width: 80px;
+  filter: invert(100%);
+  position: absolute;
+  top: -35px;
+  rotate: 35deg;
+  left: 230px;
+}
+.container .page4 .cards {
+  height: 85vh;
+}
+.container .page4 .cards .nav {
+  display: flex;
+  height: 10%;
+  align-items: center;
+  margin-left: 10px;
+  gap: 2vw;
+}
+.container .page4 .cards .nav li {
+  list-style: none;
+}
+.container .page4 .cards .nav li.active {
+  color: rgb(255, 72, 0);
+  border-bottom: 2px solid rgb(255, 72, 0);
+}
+.container .page4 .cards .wrapper {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .page4 .cards .wrapper .card {
+  width: 24%;
+  background: #ddd;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+.container .page4 .cards .wrapper .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+}
+.container .page4 .cards .wrapper .card:hover::after {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.container .page4 .cards .wrapper .card img {
+  width: 100%;
+  transition: scale 0.3s linear;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .page5 {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  overflow: hidden;
+}
+.container .page5 .logo {
+  filter: invert(50%);
+  height: 20%;
+  transform: translateY(70px);
+}
+.container .page5 h1 {
+  font-family: "allience";
+}
+.container .page5 p {
+  text-align: center;
+}
+.container .page5 .mainSwiper .swiper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 70vh;
+}
+.container .page5 .mainSwiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 550px;
+  height: 400px;
+}
+.container .page5 .mainSwiper .swiper-slide img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=main.css.map */
